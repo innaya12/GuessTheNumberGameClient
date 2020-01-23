@@ -5,9 +5,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Player from './component/player'
-import logo from './logo.svg';
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Player from './component/player';
 
 function App() {
   return (
