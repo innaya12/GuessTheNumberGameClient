@@ -1,5 +1,5 @@
 import React from 'react'
-import {getHistoryByPlayer} from '../data/playerHistory'
+import {getHistoryByPlayer} from '../data/player'
 
 class PlayersHistory extends React.Component {
     constructor(props) {
@@ -9,21 +9,21 @@ class PlayersHistory extends React.Component {
             player:''
         };
     }
-    async componentDidMount() {
-        // let player = Cookies.get('auth');
-        // this.setState({
-        //     player 
-        // })
+    // async componentDidMount() {
+    //     // let player = Cookies.get('auth');
+    //     // this.setState({
+    //     //     player 
+    //     // })
 
-        try {
-            const history = await getHistoryByPlayer(playerId)
-            this.setState({
-                history
-            });
-        }catch(error){
-            console.log(error.message)
-        }
-    };
+    //     try {
+    //         const history = await getHistoryByPlayer(playerId)
+    //         this.setState({
+    //             history
+    //         });
+    //     }catch(error){
+    //         console.log(error.message)
+    //     }
+    // };
 
 
 
