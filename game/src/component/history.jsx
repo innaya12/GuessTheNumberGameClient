@@ -1,44 +1,43 @@
 import React from 'react'
 import {getHistoryByPlayer} from '../data/player'
-
+import './style.css'
 class PlayersHistory extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            history: null,
-            player:''
+            // history: null,
+            // player:''
         };
     }
-    // async componentDidMount() {
-    //     // let player = Cookies.get('auth');
-    //     // this.setState({
-    //     //     player 
-    //     // })
-
-    //     try {
-    //         const history = await getHistoryByPlayer(playerId)
-    //         this.setState({
-    //             history
-    //         });
-    //     }catch(error){
-    //         console.log(error.message)
-    //     }
-    // };
-
-
+   
 
     render(){
-        const {history, player} = this.state;
+        const {history} = this.props;
         return(
             <div>
-                <h1>History Game</h1>      
-                {!this.state.player ?
-                <p>No games playied yet</p> 
-                :
-                <div>
-                    <h1> we have a player</h1>
-                </div>
-                }
+                <h1>History Game</h1>     
+                {/* <table>
+                    <thead>
+                        <th>name</th>
+                        <th>date</th>
+                        <th>range</th>
+                        <th>chosen number</th>
+                        <th>amount of guesses</th>
+                        <th>list of guessed numbers by computer</th>
+                    </thead>
+                        {history.length !== 0 &&
+                            history.map((game, i) =>
+                            <tbody>
+                                <td key={i}>{game.name}</td>
+                                <td key={i}>{game.name}</td>
+                                <td key={i}>{game.name}</td>
+                                <td key={i}>{game.name}</td>
+                                <td key={i}>{game.name}</td>
+                                <td key={i}>{game.name}</td>
+                            </tbody>
+                            )
+                        }
+                </table>  */}
             </div>
         )
     }
