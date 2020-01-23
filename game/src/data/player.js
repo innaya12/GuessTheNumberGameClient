@@ -1,15 +1,13 @@
 import fetcher from './fetcher';
 
-const getPlayer = async (playerId) => {
+const getPlayers = async () => {
     try {
-        const player = await fetcher.get('/player');
+        const player = await fetcher.get('/players');
         return player.data;
     }catch(error){
         console.log(error)
     }
 } 
-
-
 
 const getHistoryByPlayer = async (playerId) => {
     try {
@@ -20,4 +18,15 @@ const getHistoryByPlayer = async (playerId) => {
     }
 } 
 
-export {getHistoryByPlayer,getPlayer};
+const addPlayerToDB = async (name, num_of_games) => {
+    try{
+        const add = await fetcher.post('/players', {name, num_of_games});
+        console.log("addd")
+        return add;
+    }catch(error){
+        console.log(error)
+    }
+}
+
+
+export {getHistoryByPlayer,getPlayers, addPlayerToDB};
